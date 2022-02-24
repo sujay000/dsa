@@ -26,6 +26,7 @@ int main(){
     cin>>n;
    
     // int k=(n&((~n)+1)) or
+    // int k = ( n & ~(n-1)); or
     int k = (n & -n);
     decToBinary(k);
     
