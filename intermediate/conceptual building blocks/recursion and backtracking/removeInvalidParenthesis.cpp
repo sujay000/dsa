@@ -2,7 +2,6 @@
 using namespace std;
 
 // Remove Invalid Parenthesis
-// just format asked in q is diff
 
 bool isvalid(string s){
 
@@ -58,7 +57,10 @@ void fun(string s, unordered_set<string> &bag, int mr){
     if(mr == 0){
         if(getmin(s) == 0) // or isvalid(s) == true
         {
-            bag.insert(s);
+           if(bag.find(s) == bag.end()){
+               cout<<s<<endl;
+               bag.insert(s);
+           }
         }
 
         return;
@@ -91,9 +93,6 @@ void solve()
 
 	
 	
-	for(auto s: bag){
-		cout<<s<<endl;
-	}
 
 }
 
